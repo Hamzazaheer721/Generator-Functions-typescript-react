@@ -1,8 +1,6 @@
-import { FC, memo } from "react";
-import HomeComponent from "../../components/Home";
+import { FC, memo } from 'react';
+import HomeComponent from '../../components/Home';
 
-const ViewComponent: FC = memo(() => {
-  return <HomeComponent />;
-});
+const ViewComponent: FC = memo(() => <HomeComponent />);
 
 export default ViewComponent;

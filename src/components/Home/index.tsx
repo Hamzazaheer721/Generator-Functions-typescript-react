@@ -1,9 +1,12 @@
-import { FC, memo, useCallback, useEffect, useState } from "react";
-import initializeIterator from "./helper";
-import colorObjectType from "./types";
-import { MainContainer, Wrapper } from "./styled.index";
+import {
+  FC, memo, useCallback, useEffect, useState,
+} from 'react';
+import initializeIterator from './helper';
+import colorObjectType from './types';
+import { MainContainer, Wrapper } from './styled.index';
 
 const HomeComponent: FC = memo(() => {
+  // eslint-disable-next-line max-len
   const [colorIterator, setColorIterator] = useState<IterableIterator<colorObjectType>>(initializeIterator());
   const [colorState, changeColorState] = useState<colorObjectType>();
 
