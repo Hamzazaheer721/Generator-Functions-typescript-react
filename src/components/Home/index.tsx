@@ -9,11 +9,11 @@ const HomeComponent: FC = memo(() => {
 
   const resetIterator = useCallback(() => {
     setColorIterator(initializeIterator())
-  }, [setColorIterator, initializeIterator()])
+  }, [])
 
   const handleColorChange = useCallback(() => {
     changeColorState(colorIterator.next().value)
-  }, [colorIterator, changeColorState])
+  }, [colorIterator])
 
   useEffect(() => {
     !colorState && resetIterator();
