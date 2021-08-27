@@ -9,7 +9,7 @@ export const MainContainer = styled.div<IMainContainerProps>`
   margin-left: 20px;
   height: 100vh;
   width: 100vw;
-  background: ${({colorObject}) => colorObject ?  "linear-gradient(25deg, green, blue)": "#F8F005"}
+  background: ${({colorObject}) => colorObject ?  `linear-gradient(25deg, ${colorObject.color1}, ${colorObject.color2})`: "#F8F005"}
 `;
 
 export const Wrapper = styled.button`
