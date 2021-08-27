@@ -1,13 +1,15 @@
-import styled from "styled-components";
+import styled, {css} from "styled-components";
 import colorObjectType from "./types";
+interface IMainContainerProps {
+  colorObject?: colorObjectType
+}
 
-export const MainContainer = styled.div<{ colorObject: colorObjectType }>`
+export const MainContainer = styled.div<IMainContainerProps>`
   display: flex;
   margin-left: 20px;
   height: 100vh;
   width: 100vw;
-  // background: linear-gradient(45deg, #2193b0, #5f2c82);
-  background-color: #F8F005;
+  background: ${({colorObject}) => colorObject ?  "linear-gradient(25deg, green, blue)": "#F8F005"}
 `;
 
 export const Wrapper = styled.button`
@@ -17,19 +19,19 @@ export const Wrapper = styled.button`
   transform: translate(-50%, -50%);
   width: 380px;
   height: 86px;
-  font-size: 36px;
   font-family: 'Bebas Neue', cursive;
   background: linear-gradient(45deg, transparent 5%, #FF013C 5%);
   border: 0;
   color: #fff;
   letter-spacing: 3px;
   line-height: 1;
-  font-size: 20px;
+  font-size: 26px;
   box-shadow: 6px 0px 0px #00E6F6;
   outline: transparent;
   white-space:normal !important;
   word-wrap:break-word;
-  
+  cursor: pointer;
+
   &::after {
     --slice-0: inset(50% 50% 50% 50%);
     --slice-1: inset(80% -6px 0 0);
@@ -37,8 +39,7 @@ export const Wrapper = styled.button`
     --slice-3: inset(10% -6px 85% 0);
     --slice-4: inset(40% -6px 43% 0);
     --slice-5: inset(80% -6px 5% 0);
-    
-    content: 'Toggle background color';
+    content: 'Toggle Background Color';
     display: block;
     position: absolute;
     top: 0;
