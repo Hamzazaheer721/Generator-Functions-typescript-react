@@ -6,7 +6,7 @@ const GlobalStyles = createGlobalStyle`
     margin: 0;
     margin-left: 0 !important;
     box-sizing: border-box;
-    font-family: "Sogoe UI", "Roboto"
+    font-family: "Sogoe UI", "Roboto";
   }
 `;
 
